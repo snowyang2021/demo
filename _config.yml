@@ -12,3 +12,4 @@ baseurl: /Yangxue1988.github.io
 
     feedburner : feedname
 
+permalink: /:categories/:year/:month/:day/:title
