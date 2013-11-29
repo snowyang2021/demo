@@ -1,36 +1,51 @@
 <!DOCTYPE html>
 <html>
-
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Yangxue1988-yangxue1988.github.io : CSS在WebKit和Blink下的区域绘制" />
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640" />
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen"/>
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)"/>
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
 
-    <title>Yangxue1988-yangxue1988.github.io</title>
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+    <title>CSS by Yangxue1988</title>
   </head>
 
   <body>
+    <a id="forkme_banner" href="https://github.com/Yangxue1988/Yangxue1988-Yangxue1988.github.io">View on GitHub</a>
+    <div class="shell">
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/Yangxue1988/Yangxue1988-Yangxue1988.github.io">View on GitHub</a>
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>CSS</h1>
+            <h2>CSS在WebKit和Blink下的区域绘制</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
 
-          <h1 id="project_title">Yangxue1988-yangxue1988.github.io</h1>
-          <h2 id="project_tagline">CSS在WebKit和Blink下的区域绘制</h2>
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://github.com/Yangxue1988/Yangxue1988-Yangxue1988.github.io/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/Yangxue1988/Yangxue1988-Yangxue1988.github.io/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
+      </section>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/Yangxue1988/Yangxue1988-Yangxue1988.github.io/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/Yangxue1988/Yangxue1988-Yangxue1988.github.io/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
         <p><a href="http://blogs.adobe.com/webplatform/2013/10/28/css-regions-painting-in-webkit-and-blink/">http://blogs.adobe.com/webplatform/2013/10/28/css-regions-painting-in-webkit-and-blink/</a>
 由安德烈•布库尔发表于2013年10月28日 
 CSS 2.1规范定义了一个盒模型用来显示文档里面的内容。WebKit和Blink引擎遵守本规范并且予以实现，那么，假设当显示一个文档布局时，布局的元素作为一个单独的盒子，在混合添加碎片时，你可能最终为一个单一的元素使用了多个盒子。这意味着，引擎必须做一些技巧来正确渲染盒子片段。大多数碎片实现方面都覆盖在我以前的博客“WebKit的CSS中的碎片”里。在这篇文章中，我想专注于CSS的区域绘制是如何实现的。
@@ -42,17 +57,21 @@ CSS 2.1规范定义了一个盒模型用来显示文档里面的内容。WebKit�
 <p>图3
 我们目前正在研究的最重要的改进是把流线程的绘制委托给区域层，而不是目前实现的区域渲染。这能使我们结合流线程绘制和树层结构，并且修复一些保留在实现层面的主要的bug（例如：对相对定位溢出区域的错误裁剪）。</p>
       </section>
-    </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Yangxue1988-yangxue1988.github.io maintained by <a href="https://github.com/Yangxue1988">Yangxue1988</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/Yangxue1988">Yangxue1988</a> can be found on <a href="https://github.com/Yangxue1988/Yangxue1988-Yangxue1988.github.io">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
       </footer>
+
     </div>
 
     
-
   </body>
 </html>
